@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Blender Quiz</title>
+</head>
+<style type="text/css">
+   
+    body{
+        background-color: white;
+    }
+    .header{
+        background-color:pink;
+        height: 100px;
+        display:block;
+        margin-top:0px;
+        padding:0
+    }
+    .small_image{
+        width:20%;
+    }
+    p{
+        font-family:Arial
+    }
+    h1{
+        text-align:center;
+        padding-top:.2em;
+
+        
+        font-family:Arial, Helvetica, sans-serif
+    }
+
+    h2{
+        text-align:center;
+        font-size:20px;
+        margin-bottom:3em;
+        
+        font-family:Arial, Helvetica, sans-serif
+    }
+    
+</style>
+<body>
+    <div class="header">
+        <h1 class="pink_border"> Blender Quiz</h1>
+        <h2>
+            <i>
+                Do you know the answers to these Blender related questions? 
+            </i>
+        </h2>
+    </div>
+        <ol>
+            <li><p>What is this space considered?</p></li>
+            <img src="./images/liminal_space_2.png" class = "small_image" alt= "Pink tiled structure with large empty pools">
+            <p>
+                <label>
+                    <input id="correct1" type="radio" name="question1">Liminal
+                </label>
+            </p>
+            <p>
+                <label>
+                    <input type="radio" name="question1">Cottage Core
+                </label>
+            </p>
+
+            <p>
+                <label>
+                    <input type="radio" name="question1"> Dark Academia
+                </label>
+            </p>
+                
+            <li><p> "_____ ______" is a shading and rendering technique used to calculate how exposed each point in a scene is to ambient lighting</p></li>
+           
+            <p>
+                <label>
+                    <input type="radio" name="question2"> Ray Tracing
+                </label>
+            </p>
+            <p>
+                <label>
+                    <input id="correct2" type="radio" name="question2"> Ambient Occlusion
+                </label>
+            </p>
+            <p> 
+                <label>
+                    <input type="radio" name="question2"> Area lighting
+                </label>
+            </p>
+            <li><p> Which of the following icons would you select to add a modifier to an object?</p></li>
+            <p>
+                <label>
+                    <input type="radio" name="question3"> <img src="./images/q3_1.png" alt="blue circle with 3 extruding lines with circle tips">
+                </label>
+            </p>
+            <p>
+                <label>
+                    <input type="radio" name="question3"> <img src="./images/q3_2.png" alt="green triangle with squares for corners">
+                </label>
+            </p>
+            <p>
+                <label>
+                    <input type="radio" name="question3" id=correct3> <img src="./images/q3_3.png" alt = "blue wrench">
+                </label>
+            </p>
+            <li><p> If I wanted to scale, rotate, then move this image, what shortcuts would I use in order?</p></li>
+            <img src="./images/q4.png" class="small_image" alt="3D Monkey mesh with 3 axis lines">
+            <p>
+                <label>
+                    <input type="radio" name="question4"> S, R, M
+                </label>
+            </p>
+            <p>
+                <label>
+                    <input type="radio" name="question4" id="correct4"> S, R, G
+                </label>
+            </p>
+            <p>
+                <label>
+                    <input type="radio" name="question4"> Y, W, G
+                </label>
+            </p>
+            <p>
+                <label>
+                    <input type="radio" name="question4"> Middle mouse button, Scroll wheel, Left click
+                </label>
+            </p>
+            
+        </ol>
+
+    <input type="submit" name="submit" value="Submit Blender Quiz" onClick="result()">
+<script type="text/javascript">
+    function result()
+    {
+        var score=0;
+        if(document.getElementById('correct1').checked)
+            {	
+                score++;
+            }
+        if(document.getElementById('correct2').checked)
+            {	
+                score++;
+            }
+        if(document.getElementById('correct3').checked)
+            {	
+                score++;
+            }
+        if(document.getElementById('correct4').checked)
+            {
+                score++;
+            }
+        if(score == 4)
+            {
+            alert("Hooray, you got them all right!")
+            }
+        else
+            {
+            alert("Not quite there yet! Your score is:" + score);
+            }
+    }
+</script>
+        <p><a href="./answers.html">See answer key</a></p>
+
+        
+</body>
+</html>
